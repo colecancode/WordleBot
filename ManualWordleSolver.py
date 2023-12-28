@@ -9,13 +9,13 @@ print('''
 Input your guess, as well as the result using letters or boxes.
 
 ⬛ or "B" - Incorrect letter & position
-🟩 or "Y" - Correct letter, incorrect position
-🟨 or "G" - Correct letter & position
+🟨 or "Y" - Correct letter, incorrect position
+🟩 or "G" - Correct letter & position
 
 The format is as follows:
 
 GUESS            OR        GUESS
-⬛⬛🟨🟩⬛                BBGYB
+⬛⬛🟩🟨⬛                BBGYB
 
 ''')
 
@@ -32,13 +32,13 @@ def SortWords(c = [], wp = [], i = []):
     for i in range(0, 5):
         r = result[i]
         g = guess[i]
-        if r == "🟨" or r == "g":
+        if r == "🟩" or r == "g":
             correct.append([g, i])
             
     for i in range(0, 5):
         r = result[i]
         g = guess[i]
-        if r == "🟩" or r == "y":
+        if r == "🟨" or r == "y":
             wrongPlace.append([g, i])
         elif r  == "⬛" or r == "b":
             bool = False
